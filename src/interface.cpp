@@ -210,7 +210,7 @@ create_sys_view (GsmApplication *app, GtkBuilder * builder)
             gtk_grid_insert_row(cpu_table, (i+1)/cols);
         }
         gtk_grid_attach(cpu_table, GTK_WIDGET (temp_hbox), i%cols, i/cols, 1, 1);
-        color_picker = gsm_color_button_new (&cpu_graph->colors.at(i), GSMCP_TYPE_CPU);
+        color_picker = gsm_color_button_new (&cpu_graph->colors.at(1), GSMCP_TYPE_CPU);
         g_signal_connect (G_OBJECT (color_picker), "color-set",
                           G_CALLBACK (cb_cpu_color_changed), GINT_TO_POINTER (i));
         gtk_box_pack_start (temp_hbox, GTK_WIDGET (color_picker), FALSE, TRUE, 0);
