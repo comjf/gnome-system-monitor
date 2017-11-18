@@ -218,7 +218,7 @@ create_sys_view (GsmApplication *app, GtkBuilder * builder)
         if(app->config.num_cpus == 1) {
             label_text = g_strdup (_("CPU"));
         } else {
-            label_text = g_strdup_printf (_("CPU%d"), i+1);
+            label_text = g_strdup_printf (_("CPU%d"), &cpu_graph->colors.size());
         }
         title_text = g_strdup_printf(title_template, label_text);
         label = GTK_LABEL (gtk_label_new (label_text));
